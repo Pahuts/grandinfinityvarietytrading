@@ -1,76 +1,145 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Tailwind Site</title>
+    <title>GrandInfinity Variety Trading</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.css"
+    />
   </head>
-  <body class="bg-white text-gray-800 font-sans">
-    <!-- Navbar -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-      <div
-        class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center"
-      >
-        <h1 class="text-2xl font-bold text-blue-600">MySite</h1>
-        <nav class="hidden md:flex gap-6">
-          <a href="#" class="hover:text-blue-600">Home</a>
-          <a href="#" class="hover:text-blue-600">About</a>
-          <a href="#" class="hover:text-blue-600">Contact</a>
-        </nav>
-        <button id="menuBtn" class="md:hidden text-2xl">&#9776;</button>
-      </div>
 
-      <!-- Mobile Menu -->
-      <div id="mobileMenu" class="hidden md:hidden px-4 pb-4 space-y-2">
-        <a href="#" class="block hover:text-blue-600">Home</a>
-        <a href="#" class="block hover:text-blue-600">About</a>
-        <a href="#" class="block hover:text-blue-600">Contact</a>
+  <body>
+    <header class="bg-white shadow p-4 flex justify-between">
+      <div class="flex justify-end items-center gap-6">
+        <a href="index.html" class="flex items-center space-x-2">
+          <img
+            src="img\grandinfinitylogo.png"
+            alt="Your Logo"
+            class="h-10 w-auto"
+          />
+        </a>
+        <h1 class="text-2xl font-bold text-black-700">
+          GrandInfinity Variety Trading
+        </h1>
       </div>
+      <nav class="space-x-4">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="quote.html">Get a Quote</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="py-20 bg-gradient-to-br from-blue-100 to-white text-center">
-      <h2 class="text-4xl md:text-5xl font-bold mb-4">Welcome to My Website</h2>
-      <p class="text-lg text-gray-600 mb-8">
-        Built with just HTML + Tailwind + JS
-      </p>
-      <a
-        href="#"
-        class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
-        >Get Started</a
-      >
+    <section class="py-10 px-6 max-w-6xl mx-auto">
+      <h2 class="text-3xl font-semibold mb-6">Our Products</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="border p-4 rounded shadow hover:shadow-lg transition">
+          <div class="gallery-item">
+            <img
+              src="img\rollup-2.png"
+              alt="Roller Blind"
+              class="thumbnail mb-2"
+              id="img1"
+            />
+          </div>
+
+          <h3 class="font-bold text-lg">Roller Blinds</h3>
+          <p class="text-sm text-gray-600">
+            Simple and sleek, great for any room.
+          </p>
+        </div>
+
+        <div class="border p-4 rounded shadow hover:shadow-lg transition">
+          <div class="gallery-item">
+            <img
+              src="img\curtain-1.jpg"
+              alt="Roller Blind"
+              class="thumbnail mb-2"
+              id="img1"
+            />
+          </div>
+
+          <h3 class="font-bold text-lg">Curtains</h3>
+          <p class="text-sm text-gray-600">
+            Simple and sleek, great for any room.
+          </p>
+        </div>
+
+        <div class="border p-4 rounded shadow hover:shadow-lg transition">
+          <div class="gallery-item">
+            <img
+              src="img\wooden-1.jpg"
+              alt="Roller Blind"
+              class="thumbnail mb-2"
+              id="img1"
+            />
+          </div>
+
+          <h3 class="font-bold text-lg">Wooden Blinds</h3>
+          <p class="text-sm text-gray-600">
+            Simple and sleek, great for any room.
+          </p>
+        </div>
+        <!-- Add more product cards here -->
+      </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="py-16 max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8">
+    <!-- Modal -->
+    <div class="modal" id="modal">
+      <img src="" alt="Zoomed Image" id="zoomedImg" />
+    </div>
+
+    <section class="py-10 px-6 max-w-6xl mx-auto">
+      <h2 class="text-3xl font-semibold mb-6 text-center">Gallery</h2>
       <div
-        class="p-6 bg-white border rounded-lg shadow hover:shadow-lg transition"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
       >
-        <h3 class="text-xl font-semibold mb-2">✨ Easy to Use</h3>
-        <p>
-          Start coding right away using the Tailwind CDN — no setup required!
-        </p>
-      </div>
-      <div
-        class="p-6 bg-white border rounded-lg shadow hover:shadow-lg transition"
-      >
-        <h3 class="text-xl font-semibold mb-2">⚡ Fast & Lightweight</h3>
-        <p>No React or heavy frameworks — just clean, fast code.</p>
-      </div>
-      <div
-        class="p-6 bg-white border rounded-lg shadow hover:shadow-lg transition"
-      >
-        <h3 class="text-xl font-semibold mb-2">📱 Responsive</h3>
-        <p>Fully mobile-friendly out of the box using Tailwind's utilities.</p>
+        <div
+          class="overflow-hidden rounded-xl shadow hover:shadow-lg transition-transform transform hover:scale-105"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1609423433459-a65b330ef5da?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Modern blinds in living room"
+            class="w-full h-48 object-cover"
+          />
+        </div>
+
+        <div
+          class="overflow-hidden rounded-xl shadow hover:shadow-lg transition-transform transform hover:scale-105"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1609423433459-a65b330ef5da?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Curtains in sunlight"
+            class="w-full h-48 object-cover"
+          />
+        </div>
+
+        <div
+          class="overflow-hidden rounded-xl shadow hover:shadow-lg transition-transform transform hover:scale-105"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1609423433459-a65b330ef5da?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="White blinds"
+            class="w-full h-48 object-cover"
+          />
+        </div>
+
+        <div
+          class="overflow-hidden rounded-xl shadow hover:shadow-lg transition-transform transform hover:scale-105"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1609423433459-a65b330ef5da?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Home curtain setup"
+            class="w-full h-48 object-cover"
+          />
+        </div>
       </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-100 py-6 text-center text-gray-500">
-      © 2025 MySite. All rights reserved.
-    </footer>
 
     <script src="js/script.js"></script>
   </body>

@@ -1,0 +1,74 @@
+<!-- quote.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get a Quote</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="bg-white shadow p-4 flex justify-between">
+      <div class="flex justify-end items-center gap-6">
+        <a href="index.html" class="flex items-center space-x-2">
+          <img
+            src="img\grandinfinitylogo.png"
+            alt="Your Logo"
+            class="h-10 w-auto"
+          />
+        </a>
+        <h1 class="text-2xl font-bold text-black-700">Get a Quote</h1>
+      </div>
+      <nav class="space-x-4">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="quote.html">Get a Quote</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <section class="py-10 px-6 max-w-2xl mx-auto">
+      <form id="quoteForm" class="space-y-4 bg-gray-50 p-6 rounded-lg shadow">
+        <label class="block">
+          <span>Product Type</span>
+          <select class="w-full mt-1 border p-2 rounded" id="productType">
+            <option>Roller Blinds</option>
+            <option>Roman Blinds</option>
+            <option>Curtains</option>
+          </select>
+        </label>
+        <label class="block">
+          <span>Width (cm)</span>
+          <input
+            type="number"
+            class="w-full mt-1 border p-2 rounded"
+            id="width"
+            required
+          />
+        </label>
+        <label class="block">
+          <span>Height (cm)</span>
+          <input
+            type="number"
+            class="w-full mt-1 border p-2 rounded"
+            id="height"
+            required
+          />
+        </label>
+        <button
+          type="submit"
+          class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        >
+          Get Quote
+        </button>
+      </form>
+      <div
+        id="quoteResult"
+        class="mt-4 text-green-700 font-semibold hidden"
+      ></div>
+    </section>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
