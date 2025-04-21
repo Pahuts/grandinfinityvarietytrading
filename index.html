@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Tailwind Site</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+    <!-- Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div
+        class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <h1 class="text-2xl font-bold text-blue-600">MySite</h1>
+        <nav class="hidden md:flex gap-6">
+          <a href="#" class="hover:text-blue-600">Home</a>
+          <a href="#" class="hover:text-blue-600">About</a>
+          <a href="#" class="hover:text-blue-600">Contact</a>
+        </nav>
+        <button id="menuBtn" class="md:hidden text-2xl">&#9776;</button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden md:hidden px-4 pb-4 space-y-2">
+        <a href="#" class="block hover:text-blue-600">Home</a>
+        <a href="#" class="block hover:text-blue-600">About</a>
+        <a href="#" class="block hover:text-blue-600">Contact</a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 bg-gradient-to-br from-blue-100 to-white text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">Welcome to My Website</h2>
+      <p class="text-lg text-gray-600 mb-8">
+        Built with just HTML + Tailwind + JS
+      </p>
+      <a
+        href="#"
+        class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+        >Get Started</a
+      >
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8">
+      <div
+        class="p-6 bg-white border rounded-lg shadow hover:shadow-lg transition"
+      >
+        <h3 class="text-xl font-semibold mb-2">✨ Easy to Use</h3>
+        <p>
+          Start coding right away using the Tailwind CDN — no setup required!
+        </p>
+      </div>
+      <div
+        class="p-6 bg-white border rounded-lg shadow hover:shadow-lg transition"
+      >
+        <h3 class="text-xl font-semibold mb-2">⚡ Fast & Lightweight</h3>
+        <p>No React or heavy frameworks — just clean, fast code.</p>
+      </div>
+      <div
+        class="p-6 bg-white border rounded-lg shadow hover:shadow-lg transition"
+      >
+        <h3 class="text-xl font-semibold mb-2">📱 Responsive</h3>
+        <p>Fully mobile-friendly out of the box using Tailwind's utilities.</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-6 text-center text-gray-500">
+      © 2025 MySite. All rights reserved.
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
